@@ -1,4 +1,5 @@
-# PlexAdultMetadata.bundle
+PlexAdultMetadata.bundle
+========================
 
 ## Introduction
 
@@ -10,6 +11,35 @@ Goals for this Plex agent plugin:
 * Determine correct movie / episode / ticket without needing to rename the file
 * Provide sorted search results from the website when the filename does not contain enough information (or incorrect information)
 * Provide a framework which makes it easy to support new/more websites
+* Cache website data, for two reasons:
+  * Limit the load on the website to the absolute minimum
+  * Provide fast matching and searching such that adding a whole library of movies is easy and fast
+
+
+## Installation
+
+TO DO
+
+
+## Matching
+
+The process of finding metadata for a movie consists of the following steps:
+
+1. Determine website the movie belongs to.
+   * Can be based on both the file name and directory name. I.e. if the file names are nonsensical, placing them inside
+     a directory named after the website will still yield a proper match.
+   * Unless otherwise notes, matching is case-insensitive.
+   * Different matches have different priorities.  The more accurate a match is, the higher its priority.  This
+     prevents a small match like "filename starts with IR" to match a file to the wrong website.
+   * How this is matched is documented for each Producer / Website below.
+
+2. Find the movie / episode / show.  This usually results in one or more search results.  If the match is certain,
+   the search result will show as a 100% match.  Common ways to find matching movies are:
+   * Matching the movie release date (see Supported Date Formats below)
+   * Matching the movie id
+   * Matching words in the filename (title, actor, etc.) to movie information
+   * Unless otherwise notes, matching is case-insensitive.
+   * How this is matched is documented for each Producer / Website below.
 
 
 ## Supported Date Formats
@@ -39,27 +69,52 @@ date if at all possible without you needing to rename the file.*
   Dates in this format must be exactly 6 digits (no digits before or behind it.)
 
 
-## Supported Websites
+Producers and Websites
+======================
 
-| Website                     | Producer                      |
-|:--------------------------- |:-----------------------------:|
-| hardtied.com                | Intersec Interactive          |
-| infernalrestraints.com      | Intersec Interactive          |
-| realtimebondage.com         | Intersec Interactive          |
-| sexuallybroken.com          | Intersec Interactive          |
-| topgrl.com                  | Intersec Interactive          |
+## Intersec Interactive (a.k.a. Insex)
 
-## Matching Websites
+1. Available metadata
+   * Title
+   * Release Date
+   * Summary
+   * Actors
+   * Posters and Backdrops (derived from the same pool of images)
+1. Website matching
+   * See each individual site below
+1. Movie (Ticket) matching
+   * Primary matching is done using the release date (if found in the filename -- see Supported Date Formats)
+   * Secondary matching is done using text search (i.e. episode title and actor names in the filename will yield
+     a pretty good search result.)
+ 
 
-**Unless noted otherwise, all matching is done case-insensitive!**
+#### hardtied.com
+* Website matching:
+  * Filename contains "HARDTIED" (High)
+  * Directory contains "HARDTIED" (High)
+  * Filename starts with "HARDT" (Medium)
+  * Filename starts with "HT" (Low)
 
-### hardtied.com (Intersec Interactive)
-* Site matching:
-  * Filename contains "Hardtied"
-  * Directory contains "Hardtied"
-  * Filename starts with "Hardt"
-  * Filename starts with "HT"
-* Movie/episode matching:
-  * Filename should contain the date of the episode (see Supported Date Formats)
-  * If no date match can be made, search will match based on keywords (i.e. episode title and actor names in the filename will yield a pretty good search result.)
-  
+#### infernalrestraints.com
+* Website matching:
+  * Filename contains "INFERNALRESTRAINTS" or "INFERNAL RESTRAINTS" (High)
+  * Directory contains "INFERNALRESTRAINTS" or "INFERNAL RESTRAINTS" (High)
+  * Filename starts with "IR" (Low)
+
+#### realtimebondage.com
+* Website matching:
+  * Filename contains "REALTIMEBONDAGE" or "REALTIME BONDAGE" (High)
+  * Directory contains "REALTIMEBONDAGE" or "REALTIME BONDAGE" (High)
+  * Filename starts with "RB" or "RTB" (Low)
+
+#### sexuallybroken.com
+* Website matching:
+  * Filename contains "SEXUALLYBROKEN" or "SEXUALLY BROKEN" (High)
+  * Directory contains "SEXUALLYBROKEN" or "SEXUALLY BROKEN" (High)
+  * Filename starts with "SB" or "SEB" (Low)
+
+#### topgrl.com
+  * Filename contains "TOPGRL" (High)
+  * Directory contains "TOPGRL" (High)
+  * Filename starts with "TG" (Low)
+

@@ -21,6 +21,14 @@ class Helper(object):
             site.month = date_match.group(2)
             site.day = date_match.group(3)
             return True
+        date_match = re.match(r'.*([a-zA-Z][a-zA-Z][a-zA-Z] \d?\d, \d\d\d\d).*', filename)
+        if date_match is not None:
+            Log("Matched date format MMM DD, YYYY: {}".format(date_match.group(1)))
+            date = Datetime.ParseDate(date_match.group(1)).date()
+            site.year = "{:04d}".format(date.year)
+            site.month = "{:02d}".format(date.month)
+            site.day = "{:02d}".format(date.day)
+            return True
         date_match = re.match(r'.*([a-zA-Z][a-zA-Z][a-zA-Z] \d\d, \d\d\d\d).*', filename)
         if date_match is not None:
             Log("Matched date format MMM DD, YYYY: {}".format(date_match.group(1)))
