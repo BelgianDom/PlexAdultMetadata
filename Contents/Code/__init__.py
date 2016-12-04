@@ -7,10 +7,12 @@ import ntpath
 from matcher import Matcher
 from site import Site
 from intersec import *
+from kink import *
 
 
 def Start():
-    HTTP.CacheTime = CACHE_1HOUR
+    HTTP.CacheTime = CACHE_1MINUTE
+    # CACHE_1HOUR
     HTTP.Headers['User-Agent'] = 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.2; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0)'
 
 
@@ -24,7 +26,12 @@ class AdultMetadataAgent(Agent.Movies):
                 InfernalRestraints(),
                 TopGrl(),
                 RealTimeBondage(),
-                SexuallyBroken()]
+                SexuallyBroken(),
+                SexAndSubmission(),
+                DeviceBondage(),
+                TheUpperFloor(),
+                HardcoreGangBang()
+                ]
 
     def search(self, results, media, lang, manual):
         fn = urllib.unquote(media.filename)

@@ -47,6 +47,7 @@ class Matcher(object):
         return None
 
     def get_by_id(self, id, sites):
+        Log("Matcher.get_by_id({})".format(id))
         parts = id.split("-")
         siteId = parts[0]
 

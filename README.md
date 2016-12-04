@@ -78,7 +78,7 @@ Producers and Websites
    * Title
    * Release Date
    * Summary
-   * Actors
+   * Models/Actors
    * Posters and Backdrops (derived from the same pool of images)
 1. Website matching
    * See each individual site below
@@ -114,7 +114,60 @@ Producers and Websites
   * Filename starts with "SB" or "SEB" (Low)
 
 #### topgrl.com
+* Website matching:
   * Filename contains "TOPGRL" (High)
   * Directory contains "TOPGRL" (High)
   * Filename starts with "TG" (Low)
 
+
+## Kink.com
+
+1. Available metadata
+   * Title
+   * Genres/Collections
+   * Release Date
+   * Summary
+   * Models/Actors
+   * Director
+   * Posters and Backdrops (derived from the same pool of images)
+   * Rating
+1. Website matching
+   * See each individual site below
+1. Movie (Ticket) matching
+   * Primary matching is done using the release date (if found in the filename -- see Supported Date Formats)
+   * Secondary matching is done using the kink.com shoot Id.  If the filename contains a 5-digit code which matches a
+     shoot for the website, the shoot is added as a 90% match.
+   * Tertiary matching is done using text search (i.e. episode title and actor names in the filename will yield
+     a pretty good search result.)
+ 
+
+#### sexandsubmission.com
+* Website matching:
+  * Filename contains "SEXANDSUBMISSION" or "SEX AND SUBMISSION" (High)
+  * Directory contains "SEXANDSUBMISSION" or "SEX AND SUBMISSION" (High)
+  * Filename starts with or contains "SAS" (Low)
+
+#### devicebondage.com
+* Website matching:
+  * Filename contains "DEVICEBONDAGE" or "DEVICE BONDAGE" (High)
+  * Directory contains "DEVICEBONDAGE" or "DEVICE BONDAGE" (High)
+  * Filename starts with or contains "DB" (Low)
+
+#### theupperfloor.com
+* Website matching:
+  * Filename contains "THEUPPERFLOOR" or "UPPER FLOOR" (High)
+  * Directory contains "THEUPPERFLOOR" or "UPPER FLOOR" (High)
+  * Filename starts with or contains "TUF" (Low)
+
+#### hardcoregangbang.com
+* Website matching:
+  * Filename contains "HARDCOREGANGBANG" or "HARDCORE GANGBANG" or "HARDCORE GANG BANG" (High)
+  * Directory contains "HARDCOREGANGBANG" or "HARDCORE GANGBANG" or "HARDCORE GANG BANG" (High)
+  * Filename starts with or contains "HGB" (Low)
+
+#### boundgangbangs.com
+* Website matching:
+  * Filename contains "BOUNDGANGBANG" or "BOUND GANGBANG" or "BOUND GANG BANG" (High)
+  * Directory contains "BOUNDGANGBANG" or "BOUND GANGBANG" or "BOUND GANG BANG" (High)
+  * Filename starts with or contains "BGB" (Low)
+  * *Note that while the site name uses "bangS", the above matches work even if the S is missing.*
