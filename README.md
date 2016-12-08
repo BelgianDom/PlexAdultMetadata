@@ -140,12 +140,12 @@ Producers and Websites
    * Tertiary matching is done using text search (i.e. episode title and actor names in the filename will yield
      a pretty good search result.)
  
-
-#### sexandsubmission.com
+### BDSM Channels
+#### hogtied.com
 * Website matching:
-  * Filename contains "SEXANDSUBMISSION" or "SEX AND SUBMISSION" (High)
-  * Directory contains "SEXANDSUBMISSION" or "SEX AND SUBMISSION" (High)
-  * Filename starts with or contains "SAS" (Low)
+  * Filename contains "HOGTIED" (High)
+  * Directory contains "HOGTIED" (High)
+  * Filename starts with or contains "HT" (Low)
 
 #### devicebondage.com
 * Website matching:
@@ -159,6 +159,48 @@ Producers and Websites
   * Directory contains "THEUPPERFLOOR" or "UPPER FLOOR" (High)
   * Filename starts with or contains "TUF" (Low)
 
+#### thetrainingofo.com
+* Website matching:
+  * Filename contains "THETRAININGOFO" or "TRAINING OF O" (High)
+  * Directory contains "THETRAININGOFO" or "TRAINING OF O" (High)
+  * Filename starts with or contains "TTOO" (Low)
+
+#### kinkuniversity.com
+* Website matching:
+  * Filename contains "UNIVERSITY" (High)
+  * Directory contains "UNIVERSITY" (High)
+
+#### sadisticrope.com
+* Website matching:
+  * Filename contains "SADISTICROPE" or "SADISTIC ROPE" (High)
+  * Directory contains "SADISTICROPE" or "SADISTIC ROPE" (High)
+  * Filename starts with or contains "SR" (Low)
+
+#### waterbondage.com
+* Website matching:
+  * Filename contains "WATERBONDAGE" or "WATER BONDAGE" (High)
+  * Directory contains "WATERBONDAGE" or "WATER BONDAGE" (High)
+  * Filename starts with or contains "WB" (Low)
+
+### Hardcore Channels
+#### sexandsubmission.com
+* Website matching:
+  * Filename contains "SEXANDSUBMISSION" or "SEX AND SUBMISSION" (High)
+  * Directory contains "SEXANDSUBMISSION" or "SEX AND SUBMISSION" (High)
+  * Filename starts with or contains "SAS" (Low)
+
+#### fuckingmachines.com
+* Website matching:
+  * Filename contains "FUCKINGMACHINES" or "FUCKING MACHINES" (High)
+  * Directory contains "FUCKINGMACHINES" or "FUCKING MACHINES" (High)
+  * Filename starts with or contains "FM" (Low)
+
+#### publicdisgrace.com
+* Website matching:
+  * Filename contains "PUBLICDISGRACE" or "PUBLIC DISGRACE" (High)
+  * Directory contains "PUBLICDISGRACE" or "PUBLIC DISGRACE" (High)
+  * Filename starts with or contains "PD" (Low)
+
 #### hardcoregangbang.com
 * Website matching:
   * Filename contains "HARDCOREGANGBANG" or "HARDCORE GANGBANG" or "HARDCORE GANG BANG" (High)
@@ -171,3 +213,112 @@ Producers and Websites
   * Directory contains "BOUNDGANGBANG" or "BOUND GANGBANG" or "BOUND GANG BANG" (High)
   * Filename starts with or contains "BGB" (Low)
   * *Note that while the site name uses "bangS", the above matches work even if the S is missing.*
+
+#### dungeonsex.com
+* Website matching:
+  * Filename contains "DUNGEONSEX" or "DUNGEON SEX" (High)
+  * Directory contains "DUNGEONSEX" or "DUNGEON SEX" (High)
+
+#### animatedkink.com
+* Website matching:
+  * Filename contains "ANIMATEDKINK" or "ANIMATED KINK" (High)
+  * Directory contains "ANIMATEDKINK" or "ANIMATED KINK" (High)
+
+### FemDom Channels
+#### whippedass.com
+* Website matching:
+  * Filename contains "WHIPPEDASS" or "WHIPPED ASS" (High)
+  * Directory contains "WHIPPEDASS" or "WHIPPED ASS" (High)
+  * Filename starts with or contains "WA" (Low)
+
+#### divinebitches.com
+* Website matching:
+  * Filename contains "DIVINEBITCHES" or "DIVINE BITCHES" (High)
+  * Directory contains "DIVINEBITCHES" or "DIVINE BITCHES" (High)
+  * *Note: "DB" conflicts with DeviceBondage and hence isn't supported here.  If this is used for
+    Divine Bitches as well, perhaps we can add a preference option on which site it links to.*
+
+#### ultimatesurrender.com
+* Website matching:
+  * Filename contains "ULTIMATESURRENDER" or "ULTIMATE SURRENDER" (High)
+  * Directory contains "ULTIMATESURRENDER" or "ULTIMATE SURRENDER" (High)
+  * Filename starts with or contains "US" (Low)
+
+#### everythingbutt.com
+* Website matching:
+  * Filename contains "EVERYTHINGBUTT" or "EVERYTHING BUTT" (High)
+  * Directory contains "EVERYTHINGBUTT" or "EVERYTHING BUTT" (High)
+  * Filename starts with or contains "EB" (Low)
+
+#### electrosluts.com
+* Website matching:
+  * Filename contains "ELECTROSLUTS" or "ELECTRO SLUTS" (High)
+  * Directory contains "ELECTROSLUTS" or "ELECTRO SLUTS" (High)
+  * Filename starts with or contains "ES" (Low)
+
+#### meninpain.com
+* Website matching:
+  * Filename contains "MENINPAIN" or "MEN IN PAIN" (High)
+  * Directory contains "MENINPAIN" or "MEN IN PAIN" (High)
+  * Filename starts with or contains "MIP" (Low)
+
+#### wiredpussy.com
+* Website matching:
+  * Filename contains "WIREDPUSSY" or "WIRED PUSSY" (High)
+  * Directory contains "WIREDPUSSY" or "WIRED PUSSY" (High)
+  * Filename starts with or contains "WP" (Low)
+
+#### footworship.com
+* Website matching:
+  * Filename contains "FOOTWORSHIP" or "FOOT WORSHIP" (High)
+  * Directory contains "FOOTWORSHIP" or "FOOT WORSHIP" (High)
+  * Filename starts with or contains "FW" (Low)
+
+### TS Channels
+#### tsseduction.com
+* Website matching:
+  * Filename contains "TSSEDUCTION" or "TS SEDUCTION" (High)
+  * Directory contains "TSSEDUCTION" or "TS SEDUCTION" (High)
+  * Filename starts with or contains "TSS" (Low)
+
+#### tspussyhunters.com
+* Website matching:
+  * Filename contains "TSPUSSYHUNTERS" or "TS PUSSY HUNTERS" (High)
+  * Directory contains "TSPUSSYHUNTERS" or "TS PUSSY HUNTERS" (High)
+  * Filename starts with or contains "TSPH" (Low)
+
+### Kinkmen Channels
+#### boundgods.com
+* Website matching:
+  * Filename contains "BOUNDGODS" or "BOUND GODS" (High)
+  * Directory contains "BOUNDGODS" or "BOUND GODS" (High)
+  * Filename starts with or contains "BG" (Low)
+
+#### menonedge.com
+* Website matching:
+  * Filename contains "MENONEDGE" or "MEN ON EDGE" (High)
+  * Directory contains "MENONEDGE" or "MEN ON EDGE" (High)
+  * Filename starts with or contains "MOE" (Low)
+
+#### nakedcombat.com
+* Website matching:
+  * Filename contains "NAKEDCOMBAT" or "NAKED COMBAT" (High)
+  * Directory contains "NAKEDCOMBAT" or "NAKED COMBAT" (High)
+  * Filename starts with or contains "NK" (Low)
+
+#### boundinpublic.com
+* Website matching:
+  * Filename contains "BOUNDINPUBLIC" or "BOUND IN PUBLIC" (High)
+  * Directory contains "BOUNDINPUBLIC" or "BOUND IN PUBLIC" (High)
+  * Filename starts with or contains "BIP" (Low)
+
+#### 30minutesoftorment.com
+* Website matching:
+  * Filename contains "MINUTESOFTORMENT" or "MINUTES OF TORMENT" (High)
+  * Directory contains "MINUTESOFTORMENT" or "MINUTES OF TORMENT" (High)
+
+#### buttmachineboys.com
+* Website matching:
+  * Filename contains "BUTTMACHINEBOYS" or "BUTT MACHINE BOYS" (High)
+  * Directory contains "BUTTMACHINEBOYS" or "BUTT MACHINE BOYS" (High)
+  * Filename starts with or contains "BMB" (Low)

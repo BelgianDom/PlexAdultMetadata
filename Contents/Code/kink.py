@@ -302,18 +302,21 @@ class Kink(Site):
         return full
 
 
-class SexAndSubmission(Kink):
+#
+# BDSM Channels
+#
+
+
+class Hogtied(Kink):
     def __init__(self):
-        Kink.__init__(self, "SEXANDSUBMISSION", "Sex and Submission", "")
-        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*SEXANDSUBMISSION.*", re.IGNORECASE))
-        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*SEXANDSUBMISSION.*", re.IGNORECASE))
-        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*SEX AND SUBMISSION.*", re.IGNORECASE))
-        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*SEX AND SUBMISSION.*", re.IGNORECASE))
-        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, "^SAS\W.*", re.IGNORECASE))
-        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, ".*\WSAS\W.*", re.IGNORECASE))
+        Kink.__init__(self, "HOGTIED", "Hogtied", "")
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*HOGTIED.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*HOGTIED.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, "^HT\W.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, ".*\WHT\W.*", re.IGNORECASE))
 
     def create(self):
-        return SexAndSubmission()
+        return Hogtied()
 
 
 class DeviceBondage(Kink):
@@ -342,6 +345,105 @@ class TheUpperFloor(Kink):
 
     def create(self):
         return TheUpperFloor()
+
+
+class TheTrainingOfO(Kink):
+    def __init__(self):
+        Kink.__init__(self, "THETRAININGOFO", "The Training Of O", "")
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*THETRAININGOFO.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*THETRAININGOFO.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*TRAINING OF O.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*TRAINING OF O.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, "^TTOO\W.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, ".*\WTTOO\W.*", re.IGNORECASE))
+
+    def create(self):
+        return TheTrainingOfO()
+
+
+class KinkUniversity(Kink):
+    def __init__(self):
+        Kink.__init__(self, "KINKUNIVERSITY", "The Training Of O", "")
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*UNIVERSITY.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*UNIVERSITY.*", re.IGNORECASE))
+
+    def create(self):
+        return KinkUniversity()
+
+
+class SadisticRope(Kink):
+    def __init__(self):
+        Kink.__init__(self, "SADISTICROPE", "Sadistic Rope", "")
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*SADISTICROPE.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*SADISTICROPE.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*SADISTIC ROPE.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*SADISTIC ROPE.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, "^SR\W.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, ".*\WSR\W.*", re.IGNORECASE))
+
+    def create(self):
+        return SadisticRope()
+
+
+class WaterBondage(Kink):
+    def __init__(self):
+        Kink.__init__(self, "WATERBONDAGE", "Water Bondage", "")
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*WATERBONDAGE.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*WATERBONDAGE.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*WATER BONDAGE.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*WATER BONDAGE.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, "^WB\W.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, ".*\WWB\W.*", re.IGNORECASE))
+
+    def create(self):
+        return WaterBondage()
+
+
+#
+# Hardcore Channels
+#
+
+
+class SexAndSubmission(Kink):
+    def __init__(self):
+        Kink.__init__(self, "SEXANDSUBMISSION", "Sex and Submission", "")
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*SEXANDSUBMISSION.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*SEXANDSUBMISSION.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*SEX AND SUBMISSION.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*SEX AND SUBMISSION.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, "^SAS\W.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, ".*\WSAS\W.*", re.IGNORECASE))
+
+    def create(self):
+        return SexAndSubmission()
+
+
+class FuckingMachines(Kink):
+    def __init__(self):
+        Kink.__init__(self, "FUCKINGMACHINES", "Fucking Machines", "")
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*FUCKINGMACHINES.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*FUCKINGMACHINES.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*FUCKING MACHINES.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*FUCKING MACHINES.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, "^FM\W.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, ".*\WFM\W.*", re.IGNORECASE))
+
+    def create(self):
+        return FuckingMachines()
+
+
+class PublicDisgrace(Kink):
+    def __init__(self):
+        Kink.__init__(self, "PUBLICDISGRACE", "Public Disgrace", "")
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*PUBLICDISGRACE.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*PUBLICDISGRACE.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*PUBLIC DISGRACE.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*PUBLIC DISGRACE.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, "^PD\W.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, ".*\WPD\W.*", re.IGNORECASE))
+
+    def create(self):
+        return PublicDisgrace()
 
 
 class HardcoreGangBang(Kink):
@@ -373,4 +475,269 @@ class BoundGangBangs(Kink):
         self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, ".*\WBGB\W.*", re.IGNORECASE))
 
     def create(self):
-        return HardcoreGangBang()
+        return BoundGangBangs()
+
+
+class DungeonSex(Kink):
+    def __init__(self):
+        Kink.__init__(self, "DUNGEONSEX", "Dungeon Sex", "")
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*DUNGEONSEX.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*DUNGEONSEX.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*DUNGEON SEX.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*DUNGEON SEX.*", re.IGNORECASE))
+
+    def create(self):
+        return DungeonSex()
+
+
+class AnimatedKink(Kink):
+    def __init__(self):
+        Kink.__init__(self, "ANIMATEDKINK", "Animated Kink", "")
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*ANIMATEDKINK.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*ANIMATEDKINK.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*ANIMATED KINK.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*ANIMATED KINK.*", re.IGNORECASE))
+
+    def create(self):
+        return AnimatedKink()
+
+
+#
+# FemDom Channels
+#
+
+
+class WhippedAss(Kink):
+    def __init__(self):
+        Kink.__init__(self, "WHIPPEDASS", "Whipped Ass", "")
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*WHIPPEDASS.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*WHIPPEDASS.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*WHIPPED ASS.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*WHIPPED ASS.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, "^WA\W.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, ".*\WWA\W.*", re.IGNORECASE))
+
+    def create(self):
+        return WhippedAss()
+
+
+class DivineBitches(Kink):
+    def __init__(self):
+        Kink.__init__(self, "DIVINEBITCHES", "Divine Bitches", "")
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*DIVINEBITCHES.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*DIVINEBITCHES.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*DIVINE BITCHES.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*DIVINE BITCHES.*", re.IGNORECASE))
+        # Conflicts with DeviceBondage!
+        # self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, "^DB\W.*", re.IGNORECASE))
+        # self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, ".*\WDB\W.*", re.IGNORECASE))
+
+    def create(self):
+        return DivineBitches()
+
+
+class UltimateSurrender(Kink):
+    def __init__(self):
+        Kink.__init__(self, "ULTIMATESURRENDER", "Ultimate Surrender", "")
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*ULTIMATESURRENDER.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*ULTIMATESURRENDER.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*ULTIMATE SURRENDER.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*ULTIMATE SURRENDER.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, "^US\W.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, ".*\WUS\W.*", re.IGNORECASE))
+
+    def create(self):
+        return UltimateSurrender()
+
+
+class EverythingButt(Kink):
+    def __init__(self):
+        Kink.__init__(self, "EVERYTHINGBUTT", "Everything Butt", "")
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*EVERYTHINGBUTT.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*EVERYTHINGBUTT.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*EVERYTHING BUTT.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*EVERYTHING BUTT.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, "^EB\W.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, ".*\WEB\W.*", re.IGNORECASE))
+
+    def create(self):
+        return EverythingButt()
+
+
+class ElectroSluts(Kink):
+    def __init__(self):
+        Kink.__init__(self, "ELECTROSLUTS", "Electro Sluts", "")
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*ELECTROSLUTS.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*ELECTROSLUTS.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*ELECTRO SLUTS.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*ELECTRO SLUTS.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, "^ES\W.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, ".*\WES\W.*", re.IGNORECASE))
+
+    def create(self):
+        return ElectroSluts()
+
+
+class MenInPain(Kink):
+    def __init__(self):
+        Kink.__init__(self, "MENINPAIN", "Men In Pain", "")
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*MENINPAIN.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*MENINPAIN.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*MEN IN PAIN.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*MEN IN PAIN.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, "^MIP\W.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, ".*\WMIP\W.*", re.IGNORECASE))
+
+    def create(self):
+        return MenInPain()
+
+
+class WiredPussy(Kink):
+    def __init__(self):
+        Kink.__init__(self, "WIREDPUSSY", "Wired Pussy", "")
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*WIREDPUSSY.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*WIREDPUSSY.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*WIRED PUSSY.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*WIRED PUSSY.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, "^WP\W.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, ".*\WWP\W.*", re.IGNORECASE))
+
+    def create(self):
+        return WiredPussy()
+
+
+class FootWorship(Kink):
+    def __init__(self):
+        Kink.__init__(self, "FOOTWORSHIP", "Foot Worship", "")
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*FOOTWORSHIP.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*FOOTWORSHIP.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*FOOT WORSHIP.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*FOOT WORSHIP.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, "^FW\W.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, ".*\WFW\W.*", re.IGNORECASE))
+
+    def create(self):
+        return FootWorship()
+
+
+#
+# TS Channels
+#
+
+
+class TSSeduction(Kink):
+    def __init__(self):
+        Kink.__init__(self, "TSSEDUCTION", "TS Seduction", "")
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*TSSEDUCTION.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*TSSEDUCTION.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*TS SEDUCTION.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*TS SEDUCTION.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, "^TSS\W.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, ".*\WTSS\W.*", re.IGNORECASE))
+
+    def create(self):
+        return TSSeduction()
+
+
+class TSPussyHunters(Kink):
+    def __init__(self):
+        Kink.__init__(self, "TSPUSSYHUNTERS", "TS Pussy Hunters", "")
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*TSPussyHunters.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*TSPussyHunters.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*TS Pussy Hunters.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*TS Pussy Hunters.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, "^TSPH\W.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, ".*\WTSPH\W.*", re.IGNORECASE))
+
+    def create(self):
+        return TSPussyHunters()
+
+
+#
+# Kinkmen Channels
+#
+
+
+class BoundGods(Kink):
+    def __init__(self):
+        Kink.__init__(self, "BOUNDGODS", "Bound Gods", "")
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*BoundGods.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*BoundGods.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*Bound Gods.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*Bound Gods.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, "^BG\W.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, ".*\WBG\W.*", re.IGNORECASE))
+
+    def create(self):
+        return BoundGods()
+
+
+class MenOnEdge(Kink):
+    def __init__(self):
+        Kink.__init__(self, "MENONEDGE", "Men On Edge", "")
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*MenOnEdge.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*MenOnEdge.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*Men On Edge.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*Men On Edge.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, "^MOE\W.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, ".*\WMOE\W.*", re.IGNORECASE))
+
+    def create(self):
+        return MenOnEdge()
+
+
+class NakedCombat(Kink):
+    def __init__(self):
+        Kink.__init__(self, "NAKEDCOMBAT", "Naked Combat", "")
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*NakedCombat.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*NakedCombat.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*Naked Combat.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*Naked Combat.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, "^NK\W.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, ".*\WNK\W.*", re.IGNORECASE))
+
+    def create(self):
+        return NakedCombat()
+
+
+class BoundInPublic(Kink):
+    def __init__(self):
+        Kink.__init__(self, "BOUNDINPUBLIC", "BoundInPublic", "")
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*BoundInPublic.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*BoundInPublic.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*Bound In Public.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*Bound In Public.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, "^NIP\W.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, ".*\WBIP\W.*", re.IGNORECASE))
+
+    def create(self):
+        return BoundInPublic()
+
+
+class ThirthyMinutesOfTorment(Kink):
+    def __init__(self):
+        Kink.__init__(self, "30MINUTESOFTORMENT", "30 Minutes Of Torment", "")
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*MinutesOfTorment.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*MinutesOfTorment.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*Minutes Of Torment.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*Minutes Of Torment.*", re.IGNORECASE))
+        # Unknown
+        # self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, "^NIP\W.*", re.IGNORECASE))
+        # self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, ".*\WBIP\W.*", re.IGNORECASE))
+
+    def create(self):
+        return ThirthyMinutesOfTorment()
+
+
+class ButtMachineBoys(Kink):
+    def __init__(self):
+        Kink.__init__(self, "BUTTMACHINEBOYS", "Butt Machine Boys", "")
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*ButtMachineBoys.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*ButtMachineBoys.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*Butt Machine Boys.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*Butt Machine Boys.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, "^BMB\W.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, ".*\WBMB\W.*", re.IGNORECASE))
+
+    def create(self):
+        return ButtMachineBoys()
