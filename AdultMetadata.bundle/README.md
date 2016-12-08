@@ -1,5 +1,5 @@
-PlexAdultMetadata.bundle
-========================
+AdultMetadata.bundle
+====================
 
 ## Introduction
 

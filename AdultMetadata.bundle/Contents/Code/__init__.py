@@ -1,6 +1,6 @@
-#################################
-#   Plex Adult Metadata Agent   #
-#################################
+############################
+#   Adult Metadata Agent   #
+############################
 
 import urllib
 import ntpath
