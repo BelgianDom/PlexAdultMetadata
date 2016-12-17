@@ -96,12 +96,12 @@ class Kink(Site):
             Dict[self.siteId]['idToRecordMap'] = {}
             Dict.Save()
 
-        page = 0
+        page = 1
         matched_movie = False
         changed = False
         # cookies = HTTP.CookiesForURL("http://www.kink.com")
         while not matched_movie:
-            url = "http://www.kink.com/api/channels/shoots?category=latest&sitename={}&page={}&limit=20&includePrefs=true".format(self.siteId.lower(), page)
+            url = "http://www.kink.com/channel/{}/latest/page/{}".format(self.siteId.lower(), page)
             req = HTTP.Request(url, headers = {'Cookie': self.cookies})
             json = req.content
 
