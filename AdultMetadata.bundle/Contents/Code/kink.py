@@ -103,11 +103,7 @@ class Kink(Site):
         while not matched_movie:
             url = "http://www.kink.com/channel/{}/latest/page/{}".format(self.siteId.lower(), page)
             req = HTTP.Request(url, headers = {'Cookie': self.cookies})
-            json = req.content
-
-            json_obj = JSON.ObjectFromString(json)
-            html = HTML.ElementFromString("html" + json_obj['html'] + "</html>")
-            # Log(json_obj['html'])
+            html = HTML.ElementFromString(req.content)
 
             shoots = html.xpath("//div[@class='shoot']")
             for shoot in shoots:
