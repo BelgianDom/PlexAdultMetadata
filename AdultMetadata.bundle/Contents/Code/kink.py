@@ -187,8 +187,12 @@ class Kink(Site):
             else:
                 metadata.collections.add(tag.text_content().strip())
 
-        # set movie title to shoot title
-        metadata.title = html.xpath('//div[@class="shoot-info"]//h1')[0].text_content() + " (" + record['date'] + ")"
+        # set title
+        t = html.xpath('//div[@class="shoot-info"]/h1/text()')
+        if len(t) > 0:
+            metadata.title = "{} ({})".format(t[0], record['date'])
+        else:
+            Log("Title not found")
 
         # set content rating to XXX
         metadata.content_rating = 'XXX'
