@@ -194,8 +194,8 @@ class Kink(Site):
         else:
             Log("Title not found")
 
-        # set content rating to XXX
-        metadata.content_rating = 'XXX'
+        # set content rating to X
+        metadata.content_rating = 'X'
 
         # set episode ID as tagline for easy visibility
         metadata.tagline = metadata.studio + " – " + self.id
@@ -686,18 +686,18 @@ class MenOnEdge(Kink):
         return MenOnEdge()
 
 
-class NakedCombat(Kink):
+class NakedKombat(Kink):
     def __init__(self):
-        Kink.__init__(self, "NAKEDCOMBAT", "Naked Combat", "")
-        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*NakedCombat.*", re.IGNORECASE))
-        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*NakedCombat.*", re.IGNORECASE))
-        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*Naked Combat.*", re.IGNORECASE))
-        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*Naked Combat.*", re.IGNORECASE))
+        Kink.__init__(self, "NakedKombat", "Naked Kombat", "")
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*NakedKombat.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*NakedKombat.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*Naked Kombat.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*Naked Kombat.*", re.IGNORECASE))
         self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, "^NK\W.*", re.IGNORECASE))
         self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, ".*\WNK\W.*", re.IGNORECASE))
 
     def create(self):
-        return NakedCombat()
+        return NakedKombat()
 
 
 class BoundInPublic(Kink):

@@ -53,7 +53,7 @@ class AdultMetadataAgent(Agent.Movies):
                 TSPussyHunters(),
                 BoundGods(),
                 MenOnEdge(),
-                NakedCombat(),
+                NakedKombat(),
                 BoundInPublic(),
                 ThirthyMinutesOfTorment(),
                 ButtMachineBoys()
