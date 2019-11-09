@@ -300,10 +300,10 @@ Producers and Websites
   * Directory contains "MENONEDGE" or "MEN ON EDGE" (High)
   * Filename starts with or contains "MOE" (Low)
 
-#### nakedcombat.com
+#### NakedKombat.com
 * Website matching:
-  * Filename contains "NAKEDCOMBAT" or "NAKED COMBAT" (High)
-  * Directory contains "NAKEDCOMBAT" or "NAKED COMBAT" (High)
+  * Filename contains "NakedKombat" or "Naked Kombat" (High)
+  * Directory contains "NakedKombat" or "Naked Kombat" (High)
   * Filename starts with or contains "NK" (Low)
 
 #### boundinpublic.com
