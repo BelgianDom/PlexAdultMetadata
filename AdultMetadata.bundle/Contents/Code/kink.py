@@ -92,7 +92,6 @@ class Kink(Site):
     def update(self):
         if not self.siteId in Dict:
             Dict[self.siteId] = {}
-            Dict[self.siteId]['dateToIdMap'] = {}
             Dict[self.siteId]['idToRecordMap'] = {}
             Dict.Save()
 
@@ -116,7 +115,8 @@ class Kink(Site):
                 self.month = "{:02d}".format(date.month)
                 self.day = "{:02d}".format(date.day)
 
-                if self.get_date() in Dict[self.siteId]['dateToIdMap']:
+                id = self.get_id()
+                if id in Dict[self.siteId]['idToRecordMap']:
                     matched_movie = True
                     continue
 
@@ -145,8 +145,6 @@ class Kink(Site):
                 else:
                     t = "{} ({}, {})".format(title, modelList[0], modelList[1])
 
-                id = self.get_id()
-                Dict[self.siteId]['dateToIdMap'][self.get_date()] = id
                 Dict[self.siteId]['idToRecordMap'][id] = {}
                 Dict[self.siteId]['idToRecordMap'][id]['words'] = words
                 Dict[self.siteId]['idToRecordMap'][id]['date'] = self.get_date()
@@ -187,9 +185,12 @@ class Kink(Site):
             else:
                 metadata.collections.add(tag.text_content().strip())
 
-        # set title
+        # set movie title to shoot title
+        # metadata.title = html.xpath('//div[@class="shoot-info"]//h1')[0].text_content() + " (" + record['date'] + ")"
         t = html.xpath('//div[@class="shoot-info"]/h1/text()')
         if len(t) > 0:
+            Log("Title found")
+            Log("Date: {}".format(record['date']))
             metadata.title = "{} ({})".format(t[0], record['date'])
         else:
             Log("Title not found")
@@ -257,7 +258,7 @@ class Kink(Site):
         # cookies.add('viewing-preferences=straight%2Cgay')
         # Log(cookies)
         rating_dict = JSON.ObjectFromURL(url='http://www.kink.com/api/ratings/%s' % self.id, headers={'Cookie': self.cookies})
-        metadata.rating = float(rating_dict['avgRating']) * 2
+        metadata.rating = float(rating_dict['average']) * 2
 
     def process_images(self, metadata, html):
         valid_posters = list()
@@ -333,6 +334,18 @@ class DeviceBondage(Kink):
         return DeviceBondage()
 
 
+class FamiliesTied(Kink):
+    def __init__(self):
+        Kink.__init__(self, "FAMILIESTIED", "Families Tied", "")
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*FAMILIESTIED.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*FAMILIESTIED.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*FAMILIES TIED.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*FAMILIES TIED.*", re.IGNORECASE))
+
+    def create(self):
+        return FamiliesTied()
+
+
 class TheUpperFloor(Kink):
     def __init__(self):
         Kink.__init__(self, "THEUPPERFLOOR", "The Upper Floor", "")
@@ -361,9 +374,21 @@ class TheTrainingOfO(Kink):
         return TheTrainingOfO()
 
 
+class KinkFeatures(Kink):
+    def __init__(self):
+        Kink.__init__(self, "KINKFEATURES", "Kink Features", "")
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*KINKFEATURES.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*KINKFEATURES.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*KINK FEATURES.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*KINK FEATURES.*", re.IGNORECASE))
+
+    def create(self):
+        return KinkUniversity()
+
+
 class KinkUniversity(Kink):
     def __init__(self):
-        Kink.__init__(self, "KINKUNIVERSITY", "The Training Of O", "")
+        Kink.__init__(self, "KINKUNIVERSITY", "Kink University", "")
         self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*UNIVERSITY.*", re.IGNORECASE))
         self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*UNIVERSITY.*", re.IGNORECASE))
 
@@ -413,6 +438,7 @@ class SexAndSubmission(Kink):
         self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*SEX AND SUBMISSION.*", re.IGNORECASE))
         self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, "^SAS\W.*", re.IGNORECASE))
         self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, ".*\WSAS\W.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, ".*\WSAS\..*", re.IGNORECASE))
 
     def create(self):
         return SexAndSubmission()
@@ -469,8 +495,10 @@ class BoundGangBangs(Kink):
         self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*BOUNDGANGBANG.*", re.IGNORECASE))
         self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*BOUND GANGBANG.*", re.IGNORECASE))
         self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*BOUND GANGBANG.*", re.IGNORECASE))
-        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*BOUND GANG BANG.*", re.IGNORECASE))
-        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*BOUND GANG BANG.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*BOUNDGANGBANGS.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*BOUNDGANGBANGS.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Filename, ".*BOUND GANGBANGS.*", re.IGNORECASE))
+        self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*BOUND GANGBANGS.*", re.IGNORECASE))
         self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, "^BGB\W.*", re.IGNORECASE))
         self.patterns.append(Pattern(self, MatchPriority.Low, MatchType.Filename, ".*\WBGB\W.*", re.IGNORECASE))
 
