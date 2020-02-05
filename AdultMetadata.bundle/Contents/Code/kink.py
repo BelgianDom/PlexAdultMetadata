@@ -383,7 +383,7 @@ class KinkFeatures(Kink):
         self.patterns.append(Pattern(self, MatchPriority.High, MatchType.Directory, ".*KINK FEATURES.*", re.IGNORECASE))
 
     def create(self):
-        return KinkUniversity()
+        return KinkFeatures()
 
 
 class KinkUniversity(Kink):
